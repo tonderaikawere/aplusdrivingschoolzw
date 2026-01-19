@@ -15,11 +15,57 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "A Plus Driving School",
-  description: "www.aplusdrivingschool.co.zw",
-  icons:{
-    icon: "/Images/logo.png"
-  }
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://www.aplusdrivingschool.co.zw"),
+  title: {
+    default: "A Plus Driving School",
+    template: "%s | A Plus Driving School",
+  },
+  description:
+    "A Plus Driving School in Bulawayo offers professional driving lessons, oral lessons, practical training, and test preparation. Book lessons and learn until you pass.",
+  alternates: {
+    canonical: "/",
+  },
+  icons: {
+    icon: "/Images/logo.png",
+  },
+  openGraph: {
+    type: "website",
+    url: "/",
+    siteName: "A Plus Driving School",
+    title: "A Plus Driving School",
+    description:
+      "Professional driving lessons in Bulawayo: oral lessons, practical lessons, and exam readiness. Book your first driving lesson today.",
+    images: [
+      {
+        url: "/Images/logo.png",
+        width: 1200,
+        height: 630,
+        alt: "A Plus Driving School",
+      },
+    ],
+    locale: "en_ZW",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "A Plus Driving School",
+    description:
+      "Professional driving lessons in Bulawayo: oral lessons, practical lessons, and exam readiness. Book your first driving lesson today.",
+    images: ["/Images/logo.png"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
+  },
+  verification: {
+    google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION,
+  },
 };
 
 

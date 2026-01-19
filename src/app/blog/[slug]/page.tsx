@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import {
   Box,
@@ -18,6 +19,54 @@ import {
 } from "@mui/material";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import { BLOG_STORIES } from "../stories";
+
+export const dynamicParams = false;
+
+export function generateStaticParams() {
+  return BLOG_STORIES.map((s) => ({ slug: s.slug }));
+}
+
+export function generateMetadata({ params }: { params: { slug: string } }): Metadata {
+  const story = BLOG_STORIES.find((s) => s.slug === params.slug);
+  if (!story) {
+    return {
+      title: "Success Story",
+      alternates: { canonical: "/blog" },
+    };
+  }
+
+  const title = story.title;
+  const description = story.subtitle;
+  const canonical = `/blog/${story.slug}`;
+
+  return {
+    title,
+    description,
+    alternates: {
+      canonical,
+    },
+    openGraph: {
+      title: `${title} | A Plus Driving School`,
+      description,
+      url: canonical,
+      type: "article",
+      images: [
+        {
+          url: story.coverImage,
+          width: 1200,
+          height: 630,
+          alt: title,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${title} | A Plus Driving School`,
+      description,
+      images: [story.coverImage],
+    },
+  };
+}
 
 export default function BlogStoryPage({
   params,
