@@ -173,43 +173,6 @@ const Team = () => {
           </CardContent>
         </Card>
       </Grid>
-      <Grid item xs={12} sm={6} md={3}>
-        <Card
-          sx={{
-            borderRadius: 3,
-            transition: "0.3s",
-            "&:hover": {
-              backgroundColor: "red",
-              color: "white",
-              boxShadow: "0px 0px 10px rgba(0,0,0,0.3)",
-            },
-          }}
-        >
-          <MemberMedia src="/Images/buhle.jpg" name="Buhlebenkosi Maseko" />
-          <CardContent>
-            <Typography variant="h6" fontWeight={700} component="h2">
-              Buhlebenkosi Maseko
-            </Typography>
-            <Typography variant="body2" component="p">
-              Admin
-            </Typography>
-            <IconButton
-              aria-label="facebook"
-              sx={{
-                position: "absolute",
-                top: 10,
-                left: 10,
-                color: "white",
-                "&:hover": {
-                  color: "white",
-                },
-              }}
-            >
-              <Facebook />
-            </IconButton>
-          </CardContent>
-        </Card>
-      </Grid>
     </Grid>
   );
 }

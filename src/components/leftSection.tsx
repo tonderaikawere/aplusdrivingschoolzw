@@ -75,10 +75,6 @@ const Team = () => {
     { name: "Andile B Nsimango", role: "Director" },
     { name: "Albertina N Ncube", role: "Office Admin" },
     { name: "Makhosi Nsimango", role: "Senior Instructor", img: "/Images/makhosi.jpg" },
-    { name: "Buhlebenkosi Maseko", role: "Admin", img: "/Images/buhle.jpg" },
-    { name: "Theron Ndlovu", role: "Instructor" },
-    { name: "Luckson JACK", role: "Instructor" },
-    { name: "Langelihle Ncube", role: "Instructor" },
   ];
 
   return (

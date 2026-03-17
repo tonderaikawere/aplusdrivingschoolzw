@@ -42,7 +42,6 @@ const Gallery = ({
     "/Images/about.png",
     "/Images/hero.jpg",
     "/Images/map.png",
-    "/Images/buhle.jpg",
     "/Images/makhosi.png",
     "/Images/testimonial-1.png",
     "/Images/testimonial-1.png",

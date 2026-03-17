@@ -103,18 +103,6 @@ export default function TeamPage() {
       ],
     },
     {
-      name: "Buhlebenkosi Maseko",
-      role: "Admin",
-      img: "/Images/buhle.jpg",
-      desc:
-        "Supports learner coordination and administrative workflows to keep training smooth and reliable. Assists with scheduling updates, learner progress notes, and ensuring communication is clear between office and training sessions.",
-      highlights: [
-        "Learner coordination support",
-        "Progress tracking assistance",
-        "Office workflow and communication",
-      ],
-    },
-    {
       name: "Theron Ndlovu",
       role: "Instructor",
       desc:
